@@ -75,6 +75,17 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(accountName: Text("Dummy Name"), accountEmail: Text("Dummy Email")),
+            ListTile(leading: Icon(Icons.home), title: Text("Home"), onTap: (){print("Home Clicked");},),
+            ListTile(leading: Icon(Icons.abc), title: Text("Dummy Tab"), onTap: (){print("Dummy Tab Clicked");},)
+
+          ],
+        ),
+      ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
